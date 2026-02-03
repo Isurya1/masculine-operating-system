@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- PRIMARY SEARCH GRAVITY -->
+    <title>The Masculine Operating System | A Timeless System for Masculine Order</title>
+    <meta name="description"
+        content="A quiet, impersonal system of mental models for men. Discipline Is Not Optional. Grounded in Situation, Responsibility, and Action.">
+
+    <!-- SOCIAL PREVIEW (FIRST CONTACT) -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://themos.org/">
+    <meta property="og:title" content="The Masculine Operating System">
+    <meta property="og:description" content="A Timeless System for Masculine Order.">
+    <meta property="og:image" content="https://themos.org/assets/og-image.png">
+
+    <!-- MICRO-SYMBOL OF ORDER (FAVICON) -->
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="apple-touch-icon" href="assets/favicon.png">
+
+    <link rel="stylesheet" href="styles/main.css">
+
+    <!-- STRUCTURED DATA (SEARCH GRAVITY) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Masculine Operating System",
+      "description": "A timeless mental model set for men based on Situation, Responsibility, and Action.",
+      "url": "https://themos.org/"
+    }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="app">
+            <header class="header">
+                <div class="header__title">The Masculine Operating System</div>
+                <h1 class="header__law">Discipline Is Not Optional.</h1>
+            </header>
+
+            <main>
+                <section class="consultation">
+                    <div class="consultation__stage">
+                        <label for="stage-select">Current Life Stage</label>
+                        <select id="stage-select" class="consultation__select">
+                            <option value="formation">Stage 1: Formation</option>
+                            <option value="youth">Stage 2: Energy & Discipline</option>
+                            <option value="adulthood" selected>Stage 3: Competence & Agency</option>
+                            <option value="responsibility">Stage 4: Responsibility & Provision</option>
+                            <option value="authority">Stage 5: Authority & Mentorship</option>
+                            <option value="elderhood">Stage 6: Elderhood & Decline</option>
+                        </select>
+                    </div>
+
+                    <div class="figure">
+                        <img src="assets/burden.png" alt="Anatomical study of burden">
+                    </div>
+
+                    <div class="consultation__protocol">
+                        <div class="protocol__header">Query Discipline Protocol</div>
+                        <div class="protocol__rule">"The MOS answers situations, not emotions; duties, not desires;
+                            actions, not identities."</div>
+                        <div class="protocol__template">
+                            <div class="template__item">1. Situation (Objective event)</div>
+                            <div class="template__item">2. Responsibility (What is at stake)</div>
+                            <div class="template__item">3. Decision Point (Action vs Inaction)</div>
+                        </div>
+                    </div>
+
+                    <form id="consultation-form" class="consultation__form">
+                        <div class="consultation__field">
+                            <label for="situation-input">Describe the Situation</label>
+                            <textarea id="situation-input" class="consultation__input"
+                                placeholder="Apply the Query Protocol..."></textarea>
+                        </div>
+                        <button type="submit" id="submit-button" class="consultation__submit" disabled>CONSULT THE
+                            MODEL</button>
+                    </form>
+                </section>
+
+                <section id="response" class="response">
+                    <!-- Structured response injected here -->
+                </section>
+
+                <div class="figure">
+                    <img src="assets/stillness.png" alt="Anatomical study of stillness">
+                </div>
+            </main>
+
+            <footer class="footer">
+                <div class="header__title">Order Precedes Freedom.</div>
+            </footer>
+        </div>
+    </div>
+
+    <script type="module" src="scripts/main.js"></script>
+</body>
+
+</html>

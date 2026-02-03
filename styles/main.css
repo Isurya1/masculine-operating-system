@@ -1,0 +1,302 @@
+/* 
+ * THE MASCULINE OPERATING SYSTEM
+ * Design System: The Stone Room
+ * 
+ * Version: 7.0 (Indifferent & Law-like)
+ * This CSS embodies absolute restraint.
+ * No animations. No transitions. No persuasion.
+ * Absolute Black (#000000). Bone White (#f2f2f2).
+ */
+
+:root {
+    /* Colors: Absolute contrast */
+    --color-void: #000000;
+    --color-bone: #f2f2f2;
+    --color-ash: #444444;
+    --color-border: #222222;
+
+    /* Typography: Cold precision */
+    --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+    --font-mono: 'JetBrains Mono', 'SF Mono', 'Consolas', monospace;
+
+    /* Scale: Deliberate */
+    --text-xs: 0.75rem;
+    --text-sm: 0.875rem;
+    --text-base: 1rem;
+    --text-lg: 1.125rem;
+    --text-xl: 1.25rem;
+    --text-2xl: 1.5rem;
+
+    /* Spacing: Rigid */
+    --space-4: 1rem;
+    --space-8: 2rem;
+    --space-12: 3rem;
+    --space-16: 4rem;
+    --space-24: 6rem;
+
+    --max-width: 680px;
+}
+
+/* ========================================
+   RESET & BASE (STILLNESS)
+   ======================================== */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    transition: none !important;
+    /* Force silence */
+    animation: none !important;
+    /* Force stillness */
+}
+
+body {
+    font-family: var(--font-primary);
+    background-color: var(--color-void);
+    color: var(--color-bone);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: var(--space-12) var(--space-4);
+}
+
+/* ========================================
+   STRUCTURE (THE STONE ROOM)
+   ======================================== */
+
+.app {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.header {
+    margin-bottom: var(--space-16);
+    text-align: left;
+}
+
+.header__title {
+    font-family: var(--font-mono);
+    font-size: var(--text-sm);
+    text-transform: uppercase;
+    letter-spacing: 0.4em;
+    color: var(--color-ash);
+    margin-bottom: var(--space-4);
+}
+
+.header__law {
+    font-size: var(--text-2xl);
+    font-weight: 300;
+    line-height: 1.2;
+    max-width: 400px;
+}
+
+/* ========================================
+   IMAGERY (ANATOMICAL STUDIES)
+   ======================================== */
+
+.figure {
+    margin: var(--space-16) 0;
+    display: flex;
+    justify-content: center;
+    background: var(--color-void);
+}
+
+.figure img {
+    max-width: 100%;
+    height: auto;
+    filter: grayscale(1) contrast(1.2);
+    opacity: 0.8;
+}
+
+/* ========================================
+   CONSULTATION INTERFACE
+   ======================================== */
+
+.consultation {
+    margin-bottom: var(--space-24);
+}
+
+.consultation__protocol {
+    margin-bottom: var(--space-12);
+    padding: var(--space-8);
+    border: 1px solid var(--color-border);
+    background: transparent;
+}
+
+.protocol__header {
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    color: var(--color-ash);
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    margin-bottom: var(--space-4);
+}
+
+.protocol__rule {
+    font-size: var(--text-lg);
+    font-style: italic;
+    margin-bottom: var(--space-8);
+}
+
+.template__item {
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    color: var(--color-ash);
+    margin-bottom: var(--space-2);
+}
+
+.consultation__field {
+    margin-bottom: var(--space-8);
+}
+
+.consultation__field label {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    text-transform: uppercase;
+    color: var(--color-ash);
+    margin-bottom: var(--space-4);
+}
+
+.consultation__select,
+.consultation__input {
+    width: 100%;
+    background: var(--color-void);
+    border: 1px solid var(--color-border);
+    color: var(--color-bone);
+    font-family: inherit;
+    padding: var(--space-4);
+    appearance: none;
+    outline: none;
+    border-radius: 0;
+    display: block;
+}
+
+.consultation__select {
+    cursor: pointer;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23444444' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 1em;
+}
+
+.consultation__input:focus,
+.consultation__select:focus {
+    border-color: var(--color-ash);
+}
+
+.consultation__input {
+    min-height: 160px;
+    resize: none;
+}
+
+.consultation__submit {
+    width: 100%;
+    padding: var(--space-4);
+    background: var(--color-bone);
+    color: var(--color-void);
+    border: none;
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    cursor: pointer;
+}
+
+.consultation__submit:disabled {
+    opacity: 0.1;
+    cursor: not-allowed;
+}
+
+/* ========================================
+   RESPONSE (DECLARATIVE)
+   ======================================== */
+
+.response {
+    display: none;
+    margin-top: var(--space-16);
+    border-top: 1px solid var(--color-border);
+    padding-top: var(--space-16);
+}
+
+.response--active {
+    display: block;
+}
+
+.response__section {
+    margin-bottom: var(--space-12);
+}
+
+.response__label {
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    text-transform: uppercase;
+    color: var(--color-ash);
+    margin-bottom: var(--space-4);
+    letter-spacing: 0.1rem;
+}
+
+.response__content {
+    font-size: var(--text-base);
+}
+
+.response__content--principle {
+    font-size: var(--text-lg);
+    font-weight: 500;
+}
+
+.response__content--action {
+    color: var(--color-ash);
+}
+
+/* ========================================
+   API KEY SETUP
+   ======================================== */
+
+.api-key-setup {
+    text-align: left;
+}
+
+.api-key-setup__input {
+    width: 100%;
+    background: var(--color-void);
+    border: 1px solid var(--color-border);
+    color: var(--color-bone);
+    padding: var(--space-4);
+    margin-bottom: var(--space-4);
+}
+
+.api-key-setup__button {
+    padding: var(--space-4) var(--space-8);
+    background: var(--color-bone);
+    color: var(--color-void);
+    border: none;
+    cursor: pointer;
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+}
+
+/* ========================================
+   SCROLLBAR
+   ======================================== */
+
+::-webkit-scrollbar {
+    width: 2px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--color-void);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-ash);
+}
