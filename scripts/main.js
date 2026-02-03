@@ -37,9 +37,10 @@ function checkApiKey() {
     }
 }
 
-// Get API key from localStorage
+// Get API key from localStorage or Environment
 function getApiKey() {
-    return localStorage.getItem('mos_gemini_key');
+    // Priority: LocalStorage (User Override) -> Environment Variable (Deployment Default)
+    return localStorage.getItem('mos_gemini_key') || import.meta.env.VITE_GEMINI_API_KEY;
 }
 
 // Show API key prompt
